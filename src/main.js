@@ -6,8 +6,8 @@ import { storeState, changeState } from './../src/plant.js';
 
 $(document).ready(function() {
   const stateChanger = storeState();
-  const blueFood = changeState("soil")(5)
-
+  const blueFood = changeState("soil")(5);
+  const blueLight = changeState("light")(20);
   $('#feed').click(function(){
     const newState = stateChanger(blueFood);
     
@@ -15,7 +15,7 @@ $(document).ready(function() {
   });
 
   $('#light').click(function() {
-    const newState = stateChanger();
-    $('#light-value').text(newSta)
+    const newState = stateChanger(blueLight);
+    $('#light-value').text(newState.light);
   });
 });

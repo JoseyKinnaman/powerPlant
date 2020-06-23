@@ -7,5 +7,5 @@ const paint = function() {
   return object;
 }
 
-const painter1 = Paint();
+const painter1 = paint();
 painter1.paints("green");
